@@ -1,4 +1,4 @@
-#jenkins-jasmine-test#
+#Jenkins-Jasmine Integration Tests#
 
 
 ##PART I: Get jenkins up and running##
