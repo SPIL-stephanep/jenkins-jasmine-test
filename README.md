@@ -29,7 +29,7 @@
 			<li>Jenkins Phing plugin,
 			<li>Jenkins JIRA plugin, 
 			<li>Plot Plugin
-		<ul>
+		</ul>
 	</li>
 	<li>Set your custom build file name in the project config, in 'build/invoke Ant' advanced options (jenkins-concept.xml)</li>
 	<li>Install the basic PHP pear modules on your linux server (follow: http://gogs.info/wiki/debian/hudson, section 'PHP code metrics')</li>
