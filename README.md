@@ -17,7 +17,7 @@
 	<li>setup java + ant version in Jenkins' config (see: https://wiki.jenkins-ci.org/display/JENKINS/Tool+Auto-Installation)</li>
 </ol>
 
-##PART 2: Hook up your project in Jenkins##
+##PART II: Hook up your project in Jenkins##
 
 <ol>
 	<li>Install Jenkins' GIT plugin (https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin)</li>
@@ -39,6 +39,6 @@
 	<li>Run 'build project'</li>
 </ol>
 
-##PART 3: Integrating JasmineJS unit testing##
+##PART III: Integrating JasmineJS unit testing##
 
 !TODO!
