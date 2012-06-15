@@ -12,7 +12,7 @@
 	<li>Install PHP (apt-get install php5)</li>
 	<li>Install Jenkins (see: http://pkg.jenkins-ci.org/debian/)</li>
 	<li>Create ssh rsa key (ssh-keygen -t rsa) in /var/lib/jenkins/.ssh</li>
-	<li>Open your browser and go to : http://<youripaddress>:8080/</li>
+	<li>Open your browser and go to : http://0.0.0.0:8080/ (replace 0.0.0.0 w/ your server hostname)</li>
 	<li>Setup standard security (see: https://wiki.jenkins-ci.org/display/JENKINS/Standard+Security+Setup)</li>
 	<li>setup java + ant version in Jenkins' config (see: https://wiki.jenkins-ci.org/display/JENKINS/Tool+Auto-Installation)</li>
 </ol>
