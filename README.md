@@ -1,7 +1,7 @@
 #Jenkins-Jasmine Integration Tests#
 
 
-##PART I: Get jenkins up and running##
+##PART I: Get Jenkins up and running##
 
 <ol>
 	<li>Install Debian server (root:jenkins123)</li>
@@ -39,6 +39,8 @@
 	<li>Run 'build project'</li>
 </ol>
 
-##PART III: Integrating JasmineJS unit testing##
+##PART III: Integrate JasmineJS unit testing in your project build##
 
-!TODO!
+<ul>
+	<li>!TODO!</li>
+</ul>
