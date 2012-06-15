@@ -44,3 +44,16 @@
 <ul>
 	<li>!TODO!</li>
 </ul>
+
+##Appendix: Ressources##
+
+<ul>
+	<li>Jenkins+Jasmine+JSHint+PhantomJS: http://www.zendesk.com/blog/javascript-loves-ci</li>
+	<li>Jenkins build per IGT branch: http://entagen.github.com/jenkins-build-per-branch/</li>
+	<li>Jenkins' WIKI: https://wiki.jenkins-ci.org/display/JENKINS/Home</li>
+	<li>Jenkins (hudson) installation guide on Debian : http://gogs.info/wiki/debian/hudson</li>
+	<li>JS unit testing: http://skaug.no/ingvald/2010/10/javascript_unit_testing/</li>
+	<li>Jenkins + JSTestDriver: http://cjohansen.no/en/javascript/javascript_continuous_integration_with_hudson_and_jstestdriver</li>
+	<li>Headless WebKit: http://phantomjs.org/</li>
+	<li>Headless browser: http://www.envjs.com/</li>
+</ul>
