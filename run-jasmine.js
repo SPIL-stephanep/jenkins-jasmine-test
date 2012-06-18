@@ -53,8 +53,8 @@ page.open(system.args[1], function(status){
         console.log("Unable to access network");
         phantom.exit();
     } else {
-    //report title
-    	console.log('Jasmine Report:');
+        //report title
+    	console.log('Jasmine Unit Test Report:');
     	console.log('==================');
     	
         waitFor(function(){
@@ -66,17 +66,32 @@ page.open(system.args[1], function(status){
             });
         }, function(){
             page.evaluate(function(){
+
             	var suiteTitle = document.body.querySelector('.description').innerText;
-                var result = document.body.querySelector('.alert .bar').innerText;
-                console.log('"'+suiteTitle+'": '+result);
+                console.log('Test Suite: '+suiteTitle);
                 
-                var details = document.body.querySelectorAll('.results .suite .specSummary');
-                for (i in details) {
-                	//console.log(details[i]);
+                var jasmineVersion = document.body.querySelector('.version').innerText;
+                var timeTaken = document.body.querySelector('.duration').innerText;
+                console.log('Jasmine Version: '+ jasmineVersion);
+                console.log('Duration: '+timeTaken);
+                console.log('==================');
+                var result = document.body.querySelector('.alert .bar').innerText;
+                console.log('Result: '+result);
+                console.log('');
+                
+                //get errors
+                var errors = document.body.querySelectorAll('.specDetail.failed');
+                //show errors if there are some
+                if(errors.length > 0) {
+                    for(var i in errors) {
+                        if(typeof errors[i] === 'object') { //fix to prevent other data to be evaluated
+                            console.log(errors[i]);
+                        }
+                    }
                 }
             });
             
-            //exit pahntom to finish script run
+            //exit phantom to finish script run
             phantom.exit();
         });
     }
