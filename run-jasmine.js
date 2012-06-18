@@ -83,6 +83,9 @@ page.open(system.args[1], function(status){
                 var errors = document.body.querySelectorAll('.specDetail.failed');
                 //show errors if there are some
                 if(errors.length > 0) {
+                    console.log('Errors:');
+                    console.log('==================');
+                    console.log('');
                     for(var i in errors) {
                         if(typeof errors[i] === 'object') { //fix to prevent other data to be evaluated
                             console.log(errors[i]);
