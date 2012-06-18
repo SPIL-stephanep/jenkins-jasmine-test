@@ -86,11 +86,17 @@ page.open(system.args[1], function(status){
                     console.log('Errors:');
                     console.log('==================');
                     console.log('');
+                    var  count = 1;
                     for(var i in errors) {
                         if(typeof errors[i] === 'object') { //fix to prevent other data to be evaluated
-                            console.log(errors[i]);
+                            console.log(count +') '+ errors[i].querySelector('.description').innerText);
+                            console.log('   error: '+errors[i].querySelector('.resultMessage.fail').innerText);
+                            //console.log(errors[i].querySelector('.stackTrace'));
+                            console.log('');
+                            count++;
                         }
                     }
+                    console.log('==================');
                 }
             });
             
