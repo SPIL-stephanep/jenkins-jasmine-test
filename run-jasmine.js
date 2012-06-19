@@ -65,24 +65,20 @@ page.open(system.args[1], function(status){
                 return false;
             });
         }, function(){
-            page.evaluate(function(){
-
+            page.evaluate(function() {
             	var suiteTitle = document.body.querySelector('.description').innerText;
                 console.log('Test Suite: '+suiteTitle);
-                
                 var jasmineVersion = document.body.querySelector('.version').innerText;
-                var timeTaken = document.body.querySelector('.duration').innerText;
                 console.log('Jasmine Version: '+ jasmineVersion);
-                console.log('Duration: '+timeTaken);
                 console.log('==================');
                 var result = document.body.querySelector('.alert .bar').innerText;
                 console.log('Result: '+result);
-                console.log('');
                 
                 //get errors
                 var errors = document.body.querySelectorAll('.specDetail.failed');
                 //show errors if there are some
                 if(errors.length > 0) {
+                    console.log('');
                     console.log('Errors:');
                     console.log('==================');
                     console.log('');
@@ -91,13 +87,15 @@ page.open(system.args[1], function(status){
                         if(typeof errors[i] === 'object') { //fix to prevent other data to be evaluated
                             console.log(count +') '+ errors[i].querySelector('.description').innerText);
                             console.log('   error: '+errors[i].querySelector('.resultMessage.fail').innerText);
-                            //console.log(errors[i].querySelector('.stackTrace'));
                             console.log('');
                             count++;
                         }
                     }
-                    console.log('==================');
                 }
+                console.log('==================');
+                var timeTaken = document.body.querySelector('.duration').innerText;
+                console.log('Test '+timeTaken+' .');
+                console.log('');
             });
             
             //exit phantom to finish script run
